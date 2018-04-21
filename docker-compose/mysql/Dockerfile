@@ -5,8 +5,8 @@ ADD my.cnf /etc/mysql/conf.d/my.cnf
 RUN chown -R mysql:root /var/lib/mysql/
 
 ARG MYSQL_USER=notes-api
-ARG MYSQL_PASSWORD=Insert a notes-api user password
-ARG MYSQL_ROOT_PASSWORD=Insert a mysql root user password
+ARG MYSQL_PASSWORD={note-api-pass}
+ARG MYSQL_ROOT_PASSWORD={mysql-root-pass}
 
 ENV MYSQL_USER=$MYSQL_USER
 ENV MYSQL_PASSWORD=$MYSQL_PASSWORD
