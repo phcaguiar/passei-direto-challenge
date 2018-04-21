@@ -29,14 +29,18 @@ STEP 1 - Clone the repo
   ```
      $ sudo git clone https://github.com/phcaguiar/passei-direto-challenge.git
   ```
+  
+STEP 2  
+  
+Inform the passwords of the "notes-api" and "root" mysql users in the [Variables File](https://github.com/phcaguiar/passei-direto-challenge/blob/master/variables).  
 
-STEP 2 - Prepare the environment
+STEP 3 - Prepare the environment
 
   ```
      $ make config
   ```
 
-STEP 3 - Create the environment
+STEP 4 - Create the environment
 
   ```
      $ make deploy
