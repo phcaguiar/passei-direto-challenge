@@ -1,0 +1,9 @@
+# Variable file to insert notes-api and root passwords
+
+# Insert a value to notes-api password
+
+notes-api = password1
+
+# Insert a value to mysql-root password
+
+mysql-root-pass = password2
