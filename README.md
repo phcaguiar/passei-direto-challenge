@@ -43,5 +43,35 @@ STEP 3 - Create the environment
 Access
  
 http://localhost/notes
+  
+## API Functional Test 
+
+To test the operation of the API, I performed the following commands in powershell:
+
+Post Method
+
+  ```
+     PS C:\> Invoke-WebRequest -Uri 'http://localhost/notes' -Method Post -Body 'API Test'
+  ```
+
+Get method
+
+  ```
+     PS C:\> Invoke-WebRequest -Uri 'http://localhost/notes' -Method Get | ConvertFrom-Json
+  ```
+
+Delete method
+
+  ```
+     PS C:\> Invoke-WebRequest -Uri 'http://localhost/notes/1' -Method Delete
+  ```
+
+## API Avaliation
+
+* Post Method - To perform this method it was necessary to pass some text value to the API, because in case of null value, we would receive the message "texto inválido". Note: It was also not possible to send special characters like "?, Ç, &" and so on.
+
+* Get Method - This was just to fetch some specific content.
+
+* Delete method - To perform this method it was necessary only to pay attention to the valid id in the API, because in case of invalid id, we would receive the message "id inválido".
 
 ## End :raised_hands:
