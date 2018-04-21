@@ -1,0 +1,33 @@
+version: '3.3'
+
+services:
+
+# Mysql Container
+
+    mysql:
+        build:
+            context: ./mysql
+        ports:
+            - "3306:3306"
+
+# Node Container
+
+    node:
+        build:
+            context: ./node
+        ports:
+            - "8080:8080"
+        entrypoint: /app/run-passeidireto.sh "node server.js"
+        tty: true
+        links:
+            - mysql
+
+# Nginx Container
+
+    nginx:
+        build:
+            context: ./nginx
+        ports:
+            - "80:80"
+        links:
+            - node
