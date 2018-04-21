@@ -22,7 +22,7 @@ This environment was run and validated on Ubuntu distribution
 
 ## How to make
 
-Note: Before executing the creation of the environment it is necessary to inform the passwords of the "notes-api" and "root" mysql users in the "pass-direct-challenge/docker-compose/mysql/Dockerfile" file. These passwords must be entered into the ARG MYSQL_PASSWORD and ARG MYSQL_ROOT_PASSWORD variables respectively. This has been configured this way so there is no hardcoded in the repository.
+Note: Before executing the creation of the environment it is necessary to inform the passwords of the "notes-api" and "root" mysql users in the "passei-direto-challenge/docker-compose/mysql/Dockerfile" file. These passwords must be entered into the ARG MYSQL_PASSWORD and ARG MYSQL_ROOT_PASSWORD variables respectively. This has been configured this way so there is no hardcoded in the repository.
 
 STEP 1 - Clone The Repo
 
