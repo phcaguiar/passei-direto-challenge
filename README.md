@@ -18,7 +18,7 @@ annotation query.
   * Install git 
   * Install make
 
-This environment was run and validated on Ubuntu and Centos distributions
+This environment was run and validated on Ubuntu distribution
 
 ## How to make
 
