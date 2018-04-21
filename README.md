@@ -32,7 +32,9 @@ STEP 1 - Clone the repo
   
 STEP 2 - Enter the passwords in the variables file
   
+  
 Inform the passwords of the "notes-api" and "root mysql user" in the [Variables File](https://github.com/phcaguiar/passei-direto-challenge/blob/master/variables).  
+
 
 STEP 3 - Prepare the environment
 
