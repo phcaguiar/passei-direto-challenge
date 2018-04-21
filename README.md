@@ -22,7 +22,11 @@ This environment was run and validated on Ubuntu distribution
 
 ## How to make
 
-Note: Before executing the creation of the environment it is necessary to inform the passwords of the "notes-api" and "root" mysql users in the [Mysql Dockerfile](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/mysql/Dockerfile). These passwords must be entered into the [ARG MYSQL_PASSWORD](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/mysql/Dockerfile#L8) and [ARG MYSQL_ROOT_PASSWORD](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/mysql/Dockerfile#L9) variables respectively. This has been configured this way so there is no hardcoded in the repository.
+Note: Before executing the creation of the environment it is necessary to inform the passwords of the "notes-api" and "root" mysql users in the [Mysql Dockerfile](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/mysql/Dockerfile). These passwords must be entered into the [ARG MYSQL_PASSWORD](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/mysql/Dockerfile#L8) and [ARG MYSQL_ROOT_PASSWORD](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/mysql/Dockerfile#L9) variables respectively. 
+
+You will also need to enter the same password for the mysql "notes-api" user in the [notes-api server.js file](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/node/server.js#L12)
+
+This has been configured this way so there is no hardcoded in the repository.
 
 STEP 1 - Clone the repo
 
