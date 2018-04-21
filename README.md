@@ -30,7 +30,7 @@ STEP 1 - Clone the repo
      $ sudo git clone https://github.com/phcaguiar/passei-direto-challenge.git
   ```
   
-STEP 2  
+STEP 2 - Enter the passwords in the variables file
   
 Inform the passwords of the "notes-api" and "root" mysql users in the [Variables File](https://github.com/phcaguiar/passei-direto-challenge/blob/master/variables).  
 
