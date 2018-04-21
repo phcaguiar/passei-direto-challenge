@@ -9,7 +9,7 @@ if (!port) {
 var connection = mysql.createConnection({
 	host: 'mysql',
 	user: 'notes-api',
-	password: 'notes-api'
+	password: 'Insert a notes-api user password'
 });
 
 var server = restify.createServer();
