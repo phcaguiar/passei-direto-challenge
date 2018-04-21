@@ -1,4 +1,4 @@
-![alt text](https://github.com/phcaguiar/passei-direto-challenge/img/logo_passeidireto.svg)
+![alt text](https://github.com/phcaguiar/passei-direto-challenge/blob/master/img/logo_passeidireto.svg)
 
 
 ## The Challenge
