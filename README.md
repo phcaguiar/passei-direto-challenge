@@ -13,11 +13,21 @@ annotation query.
   * [Nginx](https://nginx.org/en/)
   * [Ansible](https://www.ansible.com/)
   * [Docker](https://www.docker.com/)
+  
 ## Requirements
 
   * Install git 
+  
+  ```
+     $ sudo apt-get install git -y
+  ```  
+  
   * Install make
-
+  
+  ```
+     $ sudo apt-get install make -y
+  ```
+  
 This environment was run and validated on Ubuntu distribution
 
 ## How to make
