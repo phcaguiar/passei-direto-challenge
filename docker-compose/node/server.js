@@ -4,12 +4,12 @@ var mysql = require('mysql');
 
 var port = process.env.NODEJS_API_PORT;
 if (!port) {
-    port = 8080;
+    port = 8888;
 }
 var connection = mysql.createConnection({
 	host: 'mysql',
-	user: 'notes-api',
-	password: '{note-api-pass}'
+	user: process.env.MYSQL_USER,
+	password: process.env.MYSQL_PASSWORD
 });
 
 var server = restify.createServer();
