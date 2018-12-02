@@ -1,6 +1,5 @@
 ![alt text](https://github.com/phcaguiar/passei-direto-challenge/blob/master/img/logo_passeidireto.svg)
 
-
 ## The Challenge
 
 The project consists of preparing the environment provisioning to run an API used for creating and
@@ -32,27 +31,55 @@ This environment was run and validated on Ubuntu distribution
 
 ## How to make
 
-Note: Before executing the creation of the environment it is necessary to inform the passwords of the "notes-api" and "root mysql user" in the [Variables File](https://github.com/phcaguiar/passei-direto-challenge/blob/master/variables). These passwords will be inserted into the [ARG MYSQL_PASSWORD](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/mysql/Dockerfile#L8) and [ARG MYSQL_ROOT_PASSWORD](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/mysql/Dockerfile#L9) variables of the [Mysql Dockerfile](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/mysql/Dockerfile) and in the [Node server.js file](https://github.com/phcaguiar/passei-direto-challenge/blob/master/docker-compose/node/server.js). This has been configured this way so there is no hardcoded in the repository.
+Note: Before creating the environment it is necessary to pass some environment variables:
 
-STEP 1 - Clone the repo
+  * MYSQL_USER - Variable defined for MYSQL username
+  * MYSQL_PASSWORD - Variable set for MYSQL user password
+  * MYSQL_ROOT_PASSWORD - Variable set for MYSQL root password
+  * MYSQL_PORT - Variable set to MYSQL port
+  * NODEJS_API_PORT - Variable defined for the Node API port
+  * NGINX_LISTEN_PORT - Variable set for Nginx proxy port
+
+To configure these ports, run the following commands:
+
+```
+     $ export MYSQL_USER=INSERT SOME USERNAME
+```
+```
+     $ export MYSQL_PASSWORD=INSERT SOME PASSWORD
+```
+```
+     $ export MYSQL_ROOT_PASSWORD=INSERT SOME PASSWORD
+```
+```
+     $ export MYSQL_PORT=INSERT SOME PORT
+```
+```
+     $ export NODEJS_API_PORT=INSERT SOME PORT
+```
+```
+     $ export NGINX_LISTEN_PORT=INSERT SOME PORT
+```
+
+ * STEP 1 - Clone the repo
 
   ```
      $ sudo git clone https://github.com/phcaguiar/passei-direto-challenge.git
   ```
   
-STEP 2 - Enter the passwords in the variables file
+* STEP 2 - Enter the passwords in the variables file
   
   
 Inform the passwords of the "notes-api" and "root mysql user" in the [Variables File](https://github.com/phcaguiar/passei-direto-challenge/blob/master/variables).  
 
 
-STEP 3 - Prepare the environment
+* STEP 3 - Prepare the environment
 
   ```
      $ make config
   ```
 
-STEP 4 - Create the environment
+* STEP 4 - Create the environment
 
   ```
      $ make deploy
@@ -66,19 +93,19 @@ http://localhost/notes
 
 To test the operation of the API, I performed the following commands in powershell:
 
-Post Method
+* Post Method
 
   ```
      PS C:\> Invoke-WebRequest -Uri 'http://localhost/notes' -Method Post -Body 'API Test'
   ```
 
-Get method
+* Get method
 
   ```
      PS C:\> Invoke-WebRequest -Uri 'http://localhost/notes' -Method Get | ConvertFrom-Json
   ```
 
-Delete method
+* Delete method
 
   ```
      PS C:\> Invoke-WebRequest -Uri 'http://localhost/notes/1' -Method Delete
