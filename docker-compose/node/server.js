@@ -8,7 +8,7 @@ if (!port) {
 }
 var connection = mysql.createConnection({
 	host: 'mysql',
-	user: process.env.MYSQL_USER,
+	user: 'notes-api',
 	password: process.env.MYSQL_PASSWORD
 });
 
