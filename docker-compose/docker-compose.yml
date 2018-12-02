@@ -7,27 +7,38 @@ services:
     mysql:
         build:
             context: ./mysql
+        environment:
+            - MYSQL_USER=${MYSQL_USER}
+            - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}    
         ports:
-            - "3306:3306"
+            - "${MYSQL_PORT}:${MYSQL_PORT}"
 
 # Node Container
 
-    node:
-        build:
-            context: ./node
-        ports:
-            - "8080:8080"
-        entrypoint: /app/run-passeidireto.sh "node server.js"
-        tty: true
-        links:
-            - mysql
+#     node:
+#         build:
+#             context: ./node
+#         environment:
+#             - MYSQL_USER=${MYSQL_USER}
+#             - MYSQL_PASSWORD=${MYSQL_PASSWORD} 
+#             - NODEJS_API_PORT=${NODEJS_API_PORT}           
+#         ports:
+#             - "${NODEJS_API_PORT}:${NODEJS_API_PORT}"
+#         entrypoint: /app/run-passeidireto.sh "node server.js"
+#         tty: true
+#         links:
+#             - mysql
 
-# Nginx Container
+# # Nginx Container
 
-    nginx:
-        build:
-            context: ./nginx
-        ports:
-            - "80:80"
-        links:
-            - node
+#     nginx:
+#         build:
+#             context: ./nginx
+#         environment:
+#             - NGINX_LISTEN_PORT=${NGINX_LISTEN_PORT}
+#             - NODEJS_API_PORT=${NODEJS_API_PORT}
+#         ports:
+#             - "${NGINX_LISTEN_PORT}:${NGINX_LISTEN_PORT}"
+#         links:
+#             - node
