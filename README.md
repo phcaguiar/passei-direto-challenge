@@ -73,7 +73,7 @@ $ export NGINX_LISTEN_PORT=INSERT SOME PORT
 $ make config
 ```
 
-  * STEP 4 - Create the environment
+### STEP 4 - Create the environment
 
 ```
 $ make deploy
