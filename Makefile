@@ -1,9 +1,6 @@
 # Makefile for deploy challenge environment
 
-setpass:
-	@bash ./scripts/set-pass.sh
-
-ansible: setpass
+ansible:
 	@bash ./scripts/install-ansible.sh
 
 config: ansible
