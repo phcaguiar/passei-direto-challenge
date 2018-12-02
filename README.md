@@ -39,13 +39,13 @@ Note: Before creating the environment it is necessary to pass some environment v
   * NODEJS_API_PORT - Variable defined for the Node API port
   * NGINX_LISTEN_PORT - Variable set for Nginx proxy port
 
-  * STEP 1 - Clone the repo
+### STEP 1 - Clone the repo
 
 ```
 $ sudo git clone https://github.com/phcaguiar/passei-direto-challenge.git
 ```
 
-  * STEP 2 - Enter the environment variables:
+### STEP 2 - Enter the environment variables:
 
 ```
 $ export MYSQL_PASSWORD=INSERT SOME PASSWORD
@@ -67,7 +67,7 @@ $ export NODEJS_API_PORT=INSERT SOME PORT
 $ export NGINX_LISTEN_PORT=INSERT SOME PORT
 ```
 
-  * STEP 3 - Prepare the environment
+### STEP 3 - Prepare the environment
 
 ```
 $ make config
