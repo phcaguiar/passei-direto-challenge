@@ -6,9 +6,10 @@ var port = process.env.NODEJS_API_PORT;
 if (!port) {
     port = 8888;
 }
+
 var connection = mysql.createConnection({
 	host: 'mysql',
-	user: 'notes-api',
+	user: process.env.MYSQL_USER,
 	password: process.env.MYSQL_PASSWORD
 });
 
